@@ -22,6 +22,7 @@ public class Primes {
             shoresh_n --;
         }
 
+        System.out.println("Prime numbers up to " + n);
         int counter = 0;
         for (int i = 0; i < primes_Arr.length; i++){
             if (primes_Arr[i] == true){
