@@ -26,7 +26,7 @@ public class Primes {
         int counter = 0;
         for (int i = 0; i < primes_Arr.length; i++){
             if (primes_Arr[i] == true){
-                System.out.println(i);
+                //System.out.println(i);
                 counter ++;
             }
         }
