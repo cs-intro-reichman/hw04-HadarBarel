@@ -1,5 +1,7 @@
 public class MyString {
     public static void main(String[] args) {
+
+
         System.out.println("Testing lowercase:");
         System.out.println("UnHappy : " + lowerCase("UnHappy"));
         System.out.println("This costs 15 Sheksls : " + lowerCase("This costs 15 Sheksls"));
@@ -14,17 +16,49 @@ public class MyString {
         System.out.println(contains("personality", "son")); // true
         System.out.println(contains("personality", "dad")); // false
         System.out.println(contains("resignation", "sign")); // true
+     
     }
 
     /** Returns the lowercase version of the given string. */
     public static String lowerCase(String str) {
-        // Replace the following statement with your code
-        return null;
+
+        String lowerstr = "";
+        for (int i = 0; i < str.length(); i ++){
+
+            char lower = str.charAt(i);
+            if (lower >= 'A' && lower <= 'Z') {
+                lowerstr += (char) (lower + 32);
+            }
+            else {
+                lowerstr += str.charAt(i);
+            }
+        }
+        return lowerstr;
     }
 
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
-        // Replace the following statement with your code
+
+
+        for (int i = 0; i <= str1.length() - str2.length(); i ++){
+                  
+            int counter1 = 0;
+            int index = i;
+            for (int j = 0; j < str2.length(); j ++){
+          
+                if (str1.charAt(index) != str2.charAt(j)){
+                    break;
+                }
+                index ++;
+                counter1 ++;
+            }
+           if (counter1 == str2.length()){
+            return true;
+           } 
+        }
+
         return false;
+
     }
+
 }
