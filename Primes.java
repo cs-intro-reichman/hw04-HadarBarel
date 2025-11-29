@@ -31,7 +31,7 @@ public class Primes {
             }
         }
 
-        int total_numbers = primes_Arr.length - 2;
+        int total_numbers = primes_Arr.length - 1;
         double percent = ((double) counter / total_numbers);
         percent  *= 100;
         int final_percent = (int) Math.round(percent);
