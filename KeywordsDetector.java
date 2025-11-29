@@ -19,7 +19,7 @@ public class KeywordsDetector {
     }
 
     /** If str1 contains str2, returns true; otherwise returns false. */
-      public static boolean contains(String str1, String str2) {
+      public static boolean contains2(String str1, String str2) {
 
         for (int i = 0; i <= str1.length() - str2.length(); i ++){       
             int counter1 = 0;
@@ -57,7 +57,7 @@ public class KeywordsDetector {
                 }  
 
             for (int j = 0; j < keywords.length; j++){
-                if (contains(sentences[i], keywords[j]) == true){
+                if (contains2(sentences[i], keywords[j]) == true){
                     System.out.println(sentences[i]);
                 }
             }
