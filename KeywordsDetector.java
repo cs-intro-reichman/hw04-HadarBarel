@@ -53,14 +53,13 @@ public class KeywordsDetector {
 
             for (int i = 0; i < sentences.length; i++) {
                 if (sentences[i] != null){
-                sentences[i] = sentences[i].toLowerCase();
+                    String sentences_lower = sentences[i].toLowerCase();
+                    for (int j = 0; j < keywords.length; j++){
+                        if (contains2(sentences_lower, keywords[j]) == true){
+                        System.out.println(sentences[i]);
+                        }
+                    }
                 }  
-
-            for (int j = 0; j < keywords.length; j++){
-                if (contains2(sentences[i], keywords[j]) == true){
-                    System.out.println(sentences[i]);
-                }
-            }
             }
 
         }
