@@ -23,22 +23,22 @@ public class KeywordsDetector {
     public static void detectAndPrint(String[] sentences, String[] keywords) {
         
         for (int i = 0; i < keywords.length; i++) {
-        keywords[i] = keywords[i].toLowerCase();
+        if (keywords[i] != null)
+            keywords[i] = keywords[i].toLowerCase();
     }
 
         for (int j = 0; j < sentences.length; j++) {
-        String lowerSentence = sentences[j].toLowerCase();
-        for (int i = 0; i < keywords.length; i++) {
-            if (MyString.contains(lowerSentence, keywords[i])) {
-                System.out.println(sentences[j]);
-                break;
+
+            if (sentences[j] != null){
+                String lowerSentence = sentences[j].toLowerCase();
+                for (int i = 0; i < keywords.length; i++) {
+                    if (keywords[i] != null  && MyString.contains(lowerSentence, keywords[i])) {
+                        System.out.println(sentences[j]);
+                        break;
+                    }
             }
         }
     }
-
-
-
-    
 
     }
 }
